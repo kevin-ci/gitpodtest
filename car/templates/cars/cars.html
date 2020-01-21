@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<table id="cars">
+	<tr>
+		<th>Make</th>
+		<th>Model</th>
+		<th>Reg</th>
+		<th>Cost</th>
+	</tr>
+	{% for car in cars %}
+	<tr>
+		<td>{{ car.make }}</td>
+		<td>{{ car.car_model }}</td>
+		<td>{{ car.registration }}</td>
+		<td>{{ car.price }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}
